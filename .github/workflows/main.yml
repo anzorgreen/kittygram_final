@@ -42,6 +42,7 @@ jobs:
         python -m pip install --upgrade pip 
         pip install flake8==6.0.0 flake8-isort==6.0.0
         pip install -r ./backend/requirements.txt
+        pip install pytest
     # Запускаем flake8
     - name: Test with flake8 and pytest
       env:
@@ -58,5 +59,5 @@ jobs:
       # что нужно проверить файлы только в папке backend/
       run: |
         python -m flake8 backend/
-        
+        pytest
 
