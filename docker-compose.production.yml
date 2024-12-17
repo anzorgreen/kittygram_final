@@ -14,7 +14,6 @@ services:
       - pg_data:/var/lib/postgresql/data
 
   backend:
-    build: ./backend/
     image: anzorgreen/kittygram_backend
     container_name: backend
     env_file: .env
@@ -26,7 +25,6 @@ services:
 
   frontend:
     env_file: .env
-    build: ./frontend/
     image: anzorgreen/kittygram_frontend
     container_name: fronend
     command: cp -r /app/build/. /static/
@@ -36,10 +34,10 @@ services:
   gateway:
     container_name: gateway
     image: anzorgreen/kittygram_gateway
-    build: ./nginx/
     env_file: .env
     ports:
       - 9000:80
     volumes:
       - static:/staticfiles/
       - media:/app/media
+
