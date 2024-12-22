@@ -48,3 +48,5 @@ dockerhub_username: ваш_логин_на_докерхабе
 
 ### Production
 The production version is optimized for performance. It should be used in live environments where users access the system.
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ich must get only in branch "test-branch"
