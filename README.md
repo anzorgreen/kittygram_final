@@ -34,7 +34,7 @@ Clone the repository to your local machine:
 ```
 git clone git@github.com:anzorgreen/kittygram_final.git
 ```
-Build and start the containers using :
+For debugging, use the file docker-compose.yml instead of docker-compose.production.yml to build the images from local files:
 ```
 docker compose up -d
 ```
